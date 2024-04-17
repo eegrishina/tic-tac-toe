@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #0e563e;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+}
+
+.game {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	gap: 100px;
+}
+
+h1 {
+	text-align: center;
+	margin: 50px 0;
+	font-size: 60px;
+	letter-spacing: 5px;
+}
+
+.square {
+	background: #107451;
+	border: 3px solid #083c2a;
+	color: #fff;
+	border-radius: 8px;
+	float: left;
+	font-size: 64px;
+	line-height: 64px;
+	font-weight: bold;
+	height: 100px;
+	width: 100px;
+	margin-right: -1px;
+	margin-top: -1px;
+	padding: 0;
+	text-align: center;
+	transition: all 0.3s linear;
+}
+
+.square:hover {
+	box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.2) inset;
+}
+
+.board-row:after {
+	clear: both;
+	content: '';
+	display: table;
+}
+
+.status,
+.historyTitle {
+	margin-bottom: 10px;
+	font-size: 18px;
+	opacity: 0.7;
+	text-align: center;
+}
+
+.winner {
+	color: #dee600;
+	font-weight: bold;
+	opacity: 1;
+}
+
+.square.winner {
+	background-color: #dee600;
+	color: #083c2a;
+}
+
+.dead-heat {
+	color: #9c9cff;
+	font-weight: bold;
+	opacity: 1;
+}
+
+ol button {
+	background-color: #107451;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	font-family: inherit;
+	font-size: 16px;
+	line-height: 16px;
+	width: 170px;
+	padding: 14px 10px;
+	text-align: left;
+	margin-bottom: 10px;
+	cursor: pointer;
+	transition: all 0.7s ease;
+}
+
+.game-info li.curMove {
+	margin: 7px 0 18px 0;
+	padding-left: 10px;
+	text-align: left;
+}
+
+.game-info button:hover {
+	background-color: #083c2a;
+}
+
+.game-info button:active {
+	transform: scale(0.9);
+}
+
+button.icon {
+	width: 30px;
+	height: 30px;
+	background-color: #083c2a;
+	color: #fff;
+	font-size: 20px;
+	border: none;
+	border-radius: 3px;
+	padding-top: 3px;
+	cursor: pointer;
+}
+
+@media (max-width: 600px) {
+	.game {
+		flex-wrap: wrap;
+		gap: 60px;
+	}
+
+	.game-info {
+		margin-left: -10px;
+	}
+}
+
+@media (max-width: 320px) {
+	h1 {
+		font-size: 45px;
+	}
+
+	.square {
+		height: 80px;
+		width: 80px;
+		font-size: 42px;
+		line-height: 42px;
+	}
+
+	.game-info {
+		margin-left: -10px;
+	}
+}
