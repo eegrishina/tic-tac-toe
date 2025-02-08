@@ -2,7 +2,7 @@
 
 <img src="demoTicTacToe.png" alt="TIC-TAC-TOE" width="60%">
 
-### [Демо игры](https://kaktusgr.github.io/tic-tac-toe/)
+### [Демо игры](https://eegrishina.github.io/tic-tac-toe/)
 
 ## Описание проекта
 
